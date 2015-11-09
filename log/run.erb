@@ -4,7 +4,7 @@ set -e
 LOG=<%= log %>/<%= name %>-<%= num %>
 
 RUNIT_USER=`whoami`
-COMMAND="svlogd -t '$LOG'"
+COMMAND="svlogd -t $LOG"
 
 test -d "$LOG" || mkdir -p -m755 "$LOG" && chown <%= user %> "$LOG"
 
